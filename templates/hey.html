@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
 
+{% block montitre %}
+debut de mes mots: bienvenue dans dispason crystal
+{% endblock %}
 {% block content %}
 <h1># diapason-crystal</h1>
 {% for x in users | reverse %}
  <li>{{ x["first_name"]  }}</li>
 
 {% endfor %} 
+fin de mes mots : voila la liste des pieces du violon et des choses sur la partition, traduiten plusieurs languages.
+Est-ce que cest une pièce du violon qui est liée directement à la musique /ou seulement une pièce technique (table, sillet)? (comme la touche, diapason (es), ou le lame, anima (it), )
 {% endblock %}
 {% block liens %}
 <a href="/">welcome</a>
 {% endblock %}
+<a href="/add_one_language"> add one language</a><a href="/add_one_musicalinstrument"> add one musicalinstrument</a><a href="/add_one_musicalinstrumentpart"> add one musicalinstrumentpart</a><a href="/add_one_scoreparts"> add one scoreparts</a><a href="/add_one_translation_score_parts"> add one translation_score_parts</a><a href="/add_one_translation_musicalinstrumentpart"> add one translation_musicalinstrumentpart</a>

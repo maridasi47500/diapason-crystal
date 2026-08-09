@@ -26,3 +26,36 @@ INSERT OR IGNORE INTO contacts (contact_id, first_name, last_name, email, phone)
 VALUES( '1', 'anonyme', 'noname', 'anonymous@email.fr', '+2653546434');
 INSERT OR IGNORE INTO contacts (contact_id, first_name, last_name, email, phone)
 VALUES( '2', 'anne onim', 'onim', 'anne.onim@email.com', '+86877779898');
+create table if not exists language(
+        id integer primary key autoincrement,
+        name text,
+            short_name text
+      , created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP                );
+create table if not exists musicalinstrument(
+        id integer primary key autoincrement,
+        name text
+      , created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP                );
+create table if not exists musicalinstrumentpart(
+        id integer primary key autoincrement,
+        musicalinstrument_id text,
+            name text,
+            language_id text
+      , created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP                );
+create table if not exists scoreparts(
+        id integer primary key autoincrement,
+        name text,
+            language_id text,
+            musical_part text
+      , created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP                );
+create table if not exists translation_score_parts(
+        id integer primary key autoincrement,
+        scoreparts_id text,
+            language_id text,
+            content text
+      , created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP                );
+create table if not exists translation_musicalinstrumentpart(
+        id integer primary key autoincrement,
+        musicalinstrumentpart_id text,
+            language_id text,
+            content text
+      , created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP                );
