@@ -1,6 +1,11 @@
 🎻 *Diapason Cristal*
 
 *Exploration sonore, performance codée et identité visuelle*
+- comment fais les harmoniques
+- jouer prêt du chevalet
+- les rapports entre ta partition et les pièces du violon
+
+
 🌌 Concept
 
 *Diapason Cristal* est un projet hybride où le violon devient une interface
